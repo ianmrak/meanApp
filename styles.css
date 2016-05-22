@@ -1,0 +1,66 @@
+.center, body .wrapper, body .box {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+html {
+  height: 100%; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: inherit; }
+  body .wrapper {
+    height: inherit; }
+  body .main {
+    display: block;
+    width: 400px; }
+  body .box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), gray);
+    padding: 8px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3); }
+  body .inline {
+    display: flex;
+    opacity: 0; }
+    body .inline p {
+      margin: 8px; }
+  body .topForm {
+    margin-bottom: 8px; }
+  body .formStyle {
+    background: #f2f2f2;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+    border-radius: 5px; }
+    body .formStyle form {
+      margin-right: 5px; }
+      body .formStyle form p {
+        font-size: 13px;
+        margin: 4px; }
+      body .formStyle form input {
+        width: 100%; }
+      body .formStyle form .password {
+        color: orange; }
+      body .formStyle form .texterror {
+        height: 10px; }
+      body .formStyle form .err {
+        color: red;
+        margin: 2px 0 4px 2px;
+        font-size: 12px; }
+      body .formStyle form .userError, body .formStyle form .searchError {
+        min-height: 14px; }
+      body .formStyle form .pwError {
+        min-height: 28px; }
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid #0DFF92; }
+
+input[type=radio]:checked ~ .check::before {
+  background: #0DFF92; }
+
+input[type=radio]:checked ~ label {
+  color: #0DFF92; }

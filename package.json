@@ -1,0 +1,21 @@
+{
+  "name": "form-valid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "sass": "node-sass src/input.scss public/css/styles.css",
+    "build": "npm run sass && browserify src/form.js --standalone app -o public/js/scripts.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
+}
