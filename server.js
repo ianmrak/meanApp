@@ -17,7 +17,7 @@ router.get('/test', function(req,res) {
 });
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/node_modules'));
+
 app.use('/', router);
 
 app.listen(3000, function() {

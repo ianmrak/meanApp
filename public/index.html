@@ -1,60 +1,42 @@
 <!doctype HTML>
-  <head>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-  <body ng-app="myApp">
-    <div ng-controller="MainController">
-      Hello <input ng-model="name">
-      Are you a <input ng-model="about"><hr/>
-      <h1>{{ name }}</h1>
-      <h2>{{ about }}</h2>
-    </div>
-    <!-- Begin form wrapper -->
-    <div class="wrapper">
-      <div class="box">
-        <div class="main">
-          <!-- Create user form -->
-          <div class="formStyle topForm">
-            <form class="form" method="post">
-              <p>Enter a username</p>
-                <input class="user" type="text" placeholder="Username">
-                <p class="userError err"></p>
-              <p>Choose a password</p>
-                <input class="password" type="password" placeholder="Password">
-                <p class="pwError err"></p>
-              <p>Please check if you would like to receive news and updates.</p>
-                <input class="getEmail" type="checkbox">
-              <button class="submit button">Submit</button>
-            </form>
-          </div>
-          <div class="formStyle">
-            <!-- Find user form -->
-            <form class="form">
-              <div class="inline wrapper">
-                <div>
-                  <p>Username</p>
-                  <p>Password</p>
-                  <p>On Mailing List:</p>
-                </div>
-                <div class="infodiv"></div>
-              </div>
-              <input class="userSearch" type="text" placeholder="Enter username">
-                <p class="searchError err"></p>
-              <button class="button showUser">Hack User Information</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+<body ng-app="myApp">
+  <div class="nav-bar">
+    <ul>
+      <div>Home</div>
+      <div>About</div>
+      <div>Contact</div>
+    </ul>
+  </div>
+  <div ng-controller="MainController">
+    Hello <input ng-model="name">
+    Are you a <input ng-model="about"><hr/>
+    <h1>{{ name }}</h1>
+    <h2>{{ about }}</h2>
+  </div>
+  <banner></banner>
+  <ul>
+    <li><a href="#/">Form One</a></li>
+    <li><a href="#/form">Form Two</a></li>
+    <li><a href="#/calc">Calculator</a></li>
+  </ul>
+  <div ng-view></div>
 
-    <!-- Angular -->
-    <script src="angular/angular.js"></script>
-    <script src="js/app.js"></script>
-    <!-- Controllers -->
-    <script src="js/controllers/MainController.js"></script>
-    <!-- Main -->
-    <script src="js/scripts.js"></script>
-    <script>app.start();</script>
+  <!-- Angular -->
+  <script src="js/libs/angular.min.js"></script>
+  <script src="js/libs/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <!-- Directives -->
+  <script src="js/directives/banner.js"></script>
+  <!-- Services -->
+  <script src="js/services/FormValidService.js"></script>
+  <!-- Controllers -->
+  <script src="js/controllers/MainController.js"></script>
+  <script src="js/controllers/FormController.js"></script>
+  <script src="js/controllers/MathController.js"></script>
+  <!-- Main -->
 
-  </body>
+</body>

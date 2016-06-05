@@ -1,0 +1,27 @@
+<section ng-controller="FormController as form">
+<div class="wrapper">
+  <div class="box">
+    <div class="main">
+      <!-- Create user form -->
+      <div class="formStyle topForm">
+        <form name="userForm" ng-submit="userForm.$valid && form.submit()" class="form" method="post" novalidate>
+          <p>Enter a username</p>
+            <input name="user" class="user" type="text" ng-blur="form.validate($event)" ng-model="form.user.name" placeholder="Username" required>
+            <p name="userError" class="err"></p>
+          <p>Enter your email</p>
+            <input name="email" class="email" type="email" ng-blur="form.validate($event)" ng-model="form.user.email" placeholder="Email" required>
+            <p name="emailError" class="err"></p>
+          <p>Please check if you would like to receive news and updates.</p>
+            <input class="getEmail" ng-model="form.user.emailList" type="checkbox" ng-checked="true">
+          <button class="submit button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <pre>form is {{ userForm.$valid }}</pre>
+  <pre>{{ form.user | json }}</pre>
+  <pre>{{ form.master | json }}</pre>
+</div>
+</section>
