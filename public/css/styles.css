@@ -13,7 +13,6 @@ body {
   padding: 0;
   height: inherit; }
   body .nav-bar {
-    position: fixed;
     background-color: black;
     width: 100%;
     height: 85px;
@@ -71,6 +70,18 @@ body {
         min-height: 14px; }
       body .formStyle form .pwError {
         min-height: 28px; }
+  body #bigBadButton {
+    width: 80;
+    height: 80px;
+    background-color: green;
+    color: black;
+    line-height: 80px;
+    text-align: center; }
+  body #bigBadButton:hover {
+    background-color: red; }
+  body #bigBadButton:active {
+    background-color: black;
+    color: white; }
 
 .calc td {
   background: #c8c8c8;

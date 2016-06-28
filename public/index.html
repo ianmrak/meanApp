@@ -11,6 +11,9 @@
       <div>Contact</div>
     </ul>
   </div>
+  <div ng-controller="ButtonController as boom">
+    <div id="bigBadButton" ng-click="boom.crazy($event)">PUSH FOR DANCE PARTY</div>
+  </div>
   <div ng-controller="MainController">
     Hello <input ng-model="name">
     Are you a <input ng-model="about"><hr/>
@@ -33,10 +36,12 @@
   <script src="js/directives/banner.js"></script>
   <!-- Services -->
   <script src="js/services/FormValidService.js"></script>
+  <script src="js/services/ButtonService.js"></script>
   <!-- Controllers -->
   <script src="js/controllers/MainController.js"></script>
   <script src="js/controllers/FormController.js"></script>
   <script src="js/controllers/MathController.js"></script>
+  <script src="js/controllers/ButtonController.js"></script>
   <!-- Main -->
 
 </body>

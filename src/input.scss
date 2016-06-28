@@ -25,7 +25,6 @@ body {
   padding: 0;
   height: inherit;
   .nav-bar {
-    position: fixed;
     background-color: black;
     width: 100%;
     height: 85px;
@@ -40,70 +39,85 @@ body {
         height: 85px;
         line-height: 85px;
         text-align: center;
+      }
+    }
   }
-}
-}
-.wrapper {
-  @extend .center;
-  height: inherit;
-}
-.main {
-  display: block;
-  width: 400px;
-}
-.box {
-  background: linear-gradient(135deg, rgba(255,255,255,.3), rgba(128,128,128,1));
-  @extend .center;
-  padding: 8px;
-  border-radius: $default-radius;
-  @include box-shadow($default-shadow);
+  .wrapper {
+    @extend .center;
+    height: inherit;
+  }
+  .main {
+    display: block;
+    width: 400px;
+  }
+  .box {
+    background: linear-gradient(135deg, rgba(255,255,255,.3), rgba(128,128,128,1));
+    @extend .center;
+    padding: 8px;
+    border-radius: $default-radius;
+    @include box-shadow($default-shadow);
 
-}
-.inline {
-  display: flex;
-  opacity: 0;
-  p {
-    margin: 8px;
-}
-}
-.botForm {
-  margin-top: 8px;
-}
-.formStyle {
-  background: $default-BG;
-  border: $default-border;
-  padding: 5px;
-  border-radius: $default-radius;
-
-  form {
-    margin-right: 5px;
-
+  }
+  .inline {
+    display: flex;
+    opacity: 0;
     p {
-      font-size: 13px;
-      margin: 4px;
- }
- input {
-   width: 100%;
- }
- .password {
-   color: orange;
- }
- .texterror {
-   height: 10px;
- }
- .err {
-   color: red;
-   margin: 2px 0 4px 2px;
-   font-size: 12px;
- }
- .userError, .searchError {
-   min-height: 14px;
- }
- .pwError {
-   min-height: 28px;
- }
- }
-}
+      margin: 8px;
+    }
+  }
+  .botForm {
+    margin-top: 8px;
+  }
+  .formStyle {
+    background: $default-BG;
+    border: $default-border;
+    padding: 5px;
+    border-radius: $default-radius;
+
+    form {
+      margin-right: 5px;
+
+      p {
+        font-size: 13px;
+        margin: 4px;
+      }
+      input {
+        width: 100%;
+      }
+      .password {
+        color: orange;
+      }
+      .texterror {
+        height: 10px;
+      }
+      .err {
+        color: red;
+        margin: 2px 0 4px 2px;
+        font-size: 12px;
+      }
+      .userError, .searchError {
+        min-height: 14px;
+      }
+      .pwError {
+        min-height: 28px;
+      }
+    }
+  }
+  #bigBadButton {
+    width: 80;
+    height: 80px;
+    background-color: green;
+    color: black;
+    line-height: 80px;
+    text-align: center;
+  }
+  #bigBadButton:hover {
+    background-color: red;
+  }
+  #bigBadButton:active {
+    background-color: black;
+    color: white;
+  }
 }
 .calc {
   td {
@@ -113,13 +127,13 @@ body {
     min-width: 40px;
     height: 20px;
     text-align: center;
-}
-td:hover {
-  background-color: rgb(180,180,180);
-}
-td:active {
-  background-color: rgb(225,225,225);
-}
+  }
+  td:hover {
+    background-color: rgb(180,180,180);
+  }
+  td:active {
+    background-color: rgb(225,225,225);
+  }
 }
 input[type=radio]:checked ~ .check {
   border: 5px solid #0DFF92;
